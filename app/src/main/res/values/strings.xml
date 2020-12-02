@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">CreativeConvergence</string>
+    <string name="skip">Skip</string>
+    <string name="reveal">Reveal</string>
+    <string name="solved">Solved</string>
+    <string name="about_rat_text">The Remote Associates Test (RAT) was developed in the 1960s as a test of creative convergent thinking. Each question consists of three cue words that are linked together in some way. All questions are from www.remote-associates-test.com</string>
+    <string name="about">About</string>
+    <string name="skipped">Skipped</string>
+    <string name="green_check_appears_when_answered_correctly">Green check appears when answered correctly</string>
+    <string name="enter_a_word_that_is_logically_connected_to_each_of_the_three_cue_words">Enter a word that is logically connected to each of the three cue words.</string>
+</resources>
