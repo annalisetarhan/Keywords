@@ -153,17 +153,16 @@ class MainFragment : Fragment() {
     }
 
     private fun hideButtonBar() {
-        binding.buttonBar.visibility = View.INVISIBLE
+        binding.skipButton.visibility = View.INVISIBLE
+        binding.revealButton.visibility = View.INVISIBLE
     }
 
     private fun showSkipButtonOnly() {
-        binding.buttonBar.visibility = View.VISIBLE
         binding.skipButton.visibility = View.VISIBLE
         binding.revealButton.visibility = View.GONE
     }
 
     private fun showSkipAndRevealButtons() {
-        binding.buttonBar.visibility = View.VISIBLE
         binding.skipButton.visibility = View.VISIBLE
         binding.revealButton.visibility = View.VISIBLE
     }
