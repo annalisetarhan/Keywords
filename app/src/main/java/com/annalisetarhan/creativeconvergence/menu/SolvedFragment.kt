@@ -16,7 +16,7 @@ class SolvedFragment : Fragment() {
     private lateinit var binding: SolvedFragmentBinding
     private lateinit var viewModel: MainViewModel
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = DataBindingUtil.inflate(
                 inflater,
                 R.layout.solved_fragment,
@@ -27,7 +27,26 @@ class SolvedFragment : Fragment() {
         viewModel = ViewModelProvider(requireActivity()).get(MainViewModel::class.java)
         binding.lifecycleOwner = viewLifecycleOwner
 
+        /*
+         * Refresh list of solved questions and check if empty
+         */
+
         viewModel.refreshSolvedQuestions()
+        if (viewModel.solvedQuestions.value.isNullOrEmpty()) {
+            showNoSolvedQuestionsMessage()
+        } else {
+            showSolvedQuestions()
+        }
+
+        return binding.root
+    }
+
+    private fun showSolvedQuestions() {
+        // Might have been hidden earlier by showNoSolvedQuestionsMessage()
+        binding.recyclerView.visibility = View.VISIBLE
+        binding.solvedTitle.visibility = View.VISIBLE
+        binding.noSolvedQuestionsTextview.visibility = View.GONE
+
         val adapter = viewModel.solvedQuestions.value?.let { SolvedAdapter(it) }
         binding.recyclerView.adapter = adapter
 
@@ -36,7 +55,11 @@ class SolvedFragment : Fragment() {
                 adapter?.submitList(it)
             }
         })
+    }
 
-        return binding.root
+    private fun showNoSolvedQuestionsMessage() {
+        binding.recyclerView.visibility = View.GONE
+        binding.solvedTitle.visibility = View.GONE
+        binding.noSolvedQuestionsTextview.visibility = View.VISIBLE
     }
 }

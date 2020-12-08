@@ -8,4 +8,6 @@
     <string name="skipped">Skipped</string>
     <string name="green_check_appears_when_answered_correctly">Green check appears when answered correctly</string>
     <string name="enter_a_word_that_is_logically_connected_to_each_of_the_three_cue_words">Enter a word that is logically connected to each of the three cue words.</string>
+    <string name="no_skipped_questions">No skipped questions</string>
+    <string name="no_solved_questions">No solved questions</string>
 </resources>

@@ -24,14 +24,14 @@ class MainFragment : Fragment() {
     private lateinit var binding: MainFragmentBinding
     private lateinit var viewModel: MainViewModel
 
-    // Setting this flag avoids turning check green when answer is revealed
+    // Setting this flag avoids turning check green when answer is revealed (as opposed to answered)
     private var revealedFlag = false
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         binding = DataBindingUtil.inflate(
             inflater,

@@ -17,7 +17,7 @@ class SkippedFragment : Fragment() {
     private lateinit var binding: SkippedFragmentBinding
     private lateinit var viewModel: MainViewModel
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = DataBindingUtil.inflate(
                 inflater,
                 R.layout.skipped_fragment,
@@ -29,14 +29,34 @@ class SkippedFragment : Fragment() {
         binding.lifecycleOwner = viewLifecycleOwner
 
         /*
-         *  Refresh list of skipped questions and send to recyclerView adapter
-         *  Include a callback to navigate to a skipped question if clicked.
+         * Refresh list of skipped questions and check if empty.
          */
         viewModel.refreshSkippedQuestions()
-        val adapter = viewModel.skippedQuestions.value?.let { SkippedAdapter(it) { item ->
-            viewModel.currentQuestion.value = item
-            this.findNavController().navigate(R.id.action_skippedFragment_to_mainFragment)
-        }}
+        if (viewModel.skippedQuestions.value.isNullOrEmpty()) {
+            showNoSkippedQuestionsMessage()
+        } else {
+            showSkippedQuestions()
+        }
+
+        return binding.root
+    }
+
+    /*
+     * Send list of skipped questions to recyclerView adapter.
+     * Include a callback to navigate to a skipped question if clicked.
+     */
+    private fun showSkippedQuestions() {
+        // Might have been hidden earlier by showNoSkippedQuestionsMessage()
+        binding.recyclerView.visibility = View.VISIBLE
+        binding.skippedTitle.visibility = View.VISIBLE
+        binding.noSkippedQuestionsTextview.visibility = View.GONE
+
+        val adapter = viewModel.skippedQuestions.value?.let {
+            SkippedAdapter(it) { item ->
+                viewModel.currentQuestion.value = item
+                this.findNavController().navigate(R.id.action_skippedFragment_to_mainFragment)
+            }
+        }
         binding.recyclerView.adapter = adapter
 
         viewModel.skippedQuestions.observe(viewLifecycleOwner, {
@@ -44,7 +64,11 @@ class SkippedFragment : Fragment() {
                 adapter?.submitList(it)
             }
         })
+    }
 
-        return binding.root
+    private fun showNoSkippedQuestionsMessage() {
+        binding.recyclerView.visibility = View.GONE
+        binding.skippedTitle.visibility = View.GONE
+        binding.noSkippedQuestionsTextview.visibility = View.VISIBLE
     }
 }
