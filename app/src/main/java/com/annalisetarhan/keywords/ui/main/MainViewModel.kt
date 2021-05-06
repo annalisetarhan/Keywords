@@ -1,12 +1,12 @@
-package com.annalisetarhan.creativeconvergence.ui.main
+package com.annalisetarhan.keywords.ui.main
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
-import com.annalisetarhan.creativeconvergence.Question
-import com.annalisetarhan.creativeconvergence.QuestionRepository
-import com.annalisetarhan.creativeconvergence.QuestionRoomDatabase
-import com.annalisetarhan.creativeconvergence.Status
+import com.annalisetarhan.keywords.Question
+import com.annalisetarhan.keywords.QuestionRepository
+import com.annalisetarhan.keywords.QuestionRoomDatabase
+import com.annalisetarhan.keywords.Status
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay

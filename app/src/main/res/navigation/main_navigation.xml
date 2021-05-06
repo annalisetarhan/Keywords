@@ -7,17 +7,17 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.annalisetarhan.creativeconvergence.ui.main.MainFragment"
+        android:name="com.annalisetarhan.keywords.ui.main.MainFragment"
         android:label="main_fragment"
         tools:layout="@layout/main_fragment" >
     </fragment>
     <fragment
         android:id="@id/solvedFragment"
-        android:name="com.annalisetarhan.creativeconvergence.menu.SolvedFragment"
+        android:name="com.annalisetarhan.keywords.menu.SolvedFragment"
         android:label="SolvedFragment" />
     <fragment
         android:id="@id/skippedFragment"
-        android:name="com.annalisetarhan.creativeconvergence.menu.SkippedFragment"
+        android:name="com.annalisetarhan.keywords.menu.SkippedFragment"
         android:label="SkippedFragment">
         <action
             android:id="@+id/action_skippedFragment_to_mainFragment"
@@ -25,6 +25,6 @@
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
-        android:name="com.annalisetarhan.creativeconvergence.menu.AboutFragment"
+        android:name="com.annalisetarhan.keywords.menu.AboutFragment"
         android:label="AboutFragment" />
 </navigation>

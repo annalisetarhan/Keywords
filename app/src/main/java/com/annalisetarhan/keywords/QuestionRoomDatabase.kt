@@ -1,4 +1,4 @@
-package com.annalisetarhan.creativeconvergence
+package com.annalisetarhan.keywords
 
 import android.content.Context
 import androidx.room.Database

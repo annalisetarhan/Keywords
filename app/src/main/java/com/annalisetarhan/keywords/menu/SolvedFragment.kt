@@ -1,4 +1,4 @@
-package com.annalisetarhan.creativeconvergence.menu
+package com.annalisetarhan.keywords.menu
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,11 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.annalisetarhan.creativeconvergence.R
-import com.annalisetarhan.creativeconvergence.databinding.SolvedFragmentBinding
-import com.annalisetarhan.creativeconvergence.ui.main.MainViewModel
+import com.annalisetarhan.keywords.R
+import com.annalisetarhan.keywords.databinding.SolvedFragmentBinding
+import com.annalisetarhan.keywords.ui.main.MainViewModel
 
 class SolvedFragment : Fragment() {
     private lateinit var binding: SolvedFragmentBinding

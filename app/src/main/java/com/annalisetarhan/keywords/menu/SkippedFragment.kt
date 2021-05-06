@@ -1,4 +1,4 @@
-package com.annalisetarhan.creativeconvergence.menu
+package com.annalisetarhan.keywords.menu
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,12 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import com.annalisetarhan.creativeconvergence.R
-import com.annalisetarhan.creativeconvergence.databinding.SkippedFragmentBinding
-import com.annalisetarhan.creativeconvergence.ui.main.MainViewModel
+import com.annalisetarhan.keywords.R
+import com.annalisetarhan.keywords.databinding.SkippedFragmentBinding
+import com.annalisetarhan.keywords.ui.main.MainViewModel
 
 class SkippedFragment : Fragment() {
     private lateinit var binding: SkippedFragmentBinding

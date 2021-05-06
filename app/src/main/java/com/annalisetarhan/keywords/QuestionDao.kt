@@ -1,4 +1,4 @@
-package com.annalisetarhan.creativeconvergence
+package com.annalisetarhan.keywords
 
 import androidx.room.Dao
 import androidx.room.Query

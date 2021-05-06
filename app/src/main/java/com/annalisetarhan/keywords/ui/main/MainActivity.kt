@@ -1,4 +1,4 @@
-package com.annalisetarhan.creativeconvergence.ui.main
+package com.annalisetarhan.keywords.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,7 +6,7 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.navigation.findNavController
 import androidx.navigation.ui.onNavDestinationSelected
-import com.annalisetarhan.creativeconvergence.R
+import com.annalisetarhan.keywords.R
 
 class MainActivity : AppCompatActivity() {
 

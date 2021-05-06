@@ -1,4 +1,4 @@
-package com.annalisetarhan.creativeconvergence.ui.main
+package com.annalisetarhan.keywords.ui.main
 
 import android.os.Bundle
 import android.text.Editable
@@ -9,11 +9,10 @@ import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.annalisetarhan.creativeconvergence.R
-import com.annalisetarhan.creativeconvergence.Status
-import com.annalisetarhan.creativeconvergence.databinding.MainFragmentBinding
+import com.annalisetarhan.keywords.R
+import com.annalisetarhan.keywords.Status
+import com.annalisetarhan.keywords.databinding.MainFragmentBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay

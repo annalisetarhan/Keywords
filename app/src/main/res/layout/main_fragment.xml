@@ -7,7 +7,7 @@
     <data>
         <variable
             name="mainViewModel"
-            type="com.annalisetarhan.creativeconvergence.ui.main.MainViewModel" />
+            type="com.annalisetarhan.keywords.ui.main.MainViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
